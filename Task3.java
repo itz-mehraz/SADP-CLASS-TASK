@@ -16,6 +16,12 @@ abstract class Footballer {
     }
 
     public abstract String getPlayerType();
+
+    public void printDetails() {
+        System.out.println("Name: " + getName());
+        System.out.println("Age: " + getAge());
+        System.out.println("Player Type: " + getPlayerType());
+    }
 }
 
 class Player1 extends Footballer {
@@ -51,21 +57,15 @@ class Player3 extends Footballer {
     }
 }
 
-public class Task3 {
+public class Main {
     public static void main(String[] args) {
-        Player1 f1 = new Player1("Lionel Messi", 36);
-        System.out.println("Name: " + f1.getName());
-        System.out.println("Age: " + f1.getAge());
-        System.out.println(f1.getPlayerType());
+        Player1 f1 = new Player1("Cristiano Ronaldo", 36);
+        f1.printDetails();
 
-        Player2 f2 = new Player2("Rodrigo D Paul", 29);
-        System.out.println("Name: " + f2.getName());
-        System.out.println("Age: " + f2.getAge());
-        System.out.println(f2.getPlayerType());
+        Player2 f2 = new Player2("Neymar Jr.", 29);
+        f2.printDetails();
 
-        Player3 f3 = new Player3("Emi Martinez", 30);
-        System.out.println("Name: " + f3.getName());
-        System.out.println("Age: " + f3.getAge());
-        System.out.println(f3.getPlayerType());
+        Player3 f3 = new Player3("Kevin De Bruyne", 30);
+        f3.printDetails();
     }
 }
